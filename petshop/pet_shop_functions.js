@@ -85,23 +85,6 @@ myFunctions = {
       return true;
     };
   },
-//  sellPetToCustomer(petShop,pet,customer){
-//     /*TEST21*//*TEST22*//*TEST23*/
-//     if petShop has the pet to sell...*/
-//     //if (myFunctions.getPetByName(petShop,pet) != undefined){
-// /*... and the customer can afford the pet */
-//       if (myFunctions.customerCanAffordPet(customer,pet)){
-// /* then removePetByName AND addPetToCustomer */
-//       myFunctions.addPetToCustomer(customer,pet);
-//       myFunctions.removePetByName(petShop,pet);
-// /* then removeCustomerCash AND addOrRemoveCash */
-//       myFunctions.removeCustomerCash(customer,cash);
-//       myFunctions.addOrRemoveCash(petShop,cash);
-// /* then increasePetsSold */
-//       myFunctions.increasePetsSold(petShop,1);
-//       };
-//     };
-//   }
   sellPetToCustomer(petShop, pet, customer){
     /*TEST21
       customer pet count to increase
@@ -112,7 +95,7 @@ myFunctions = {
       getPetByName needs to return a value */
     /*TEST23
       pet.value cannot be more than customer.cash */
-      
+
     if(pet){ //returns truthy if pet exists
       if(customer.cash >= pet.price){
         myFunctions.removeCustomerCash (customer, pet.price);
