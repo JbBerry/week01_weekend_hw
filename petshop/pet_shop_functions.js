@@ -97,7 +97,7 @@ myFunctions = {
       pet.value cannot be more than customer.cash */
 
     if(pet){ //returns truthy if pet exists
-      if(customer.cash >= pet.price){
+      if(myFunctions.customerCanAffordPet(customer,pet)){
         myFunctions.removeCustomerCash (customer, pet.price);
         myFunctions.addOrRemoveCash(petShop, pet.price);
         myFunctions.addPetToCustomer(customer, pet);
